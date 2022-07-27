@@ -1,0 +1,16 @@
+http://www.mac-torrent-download.net/application/utility/codesign-macos-10-9-4/
+ 
+http://lp.ilividnewtab.com/?lpid=4067&appid=257&subid=wRT7H9ID0D554T5KG9U7JAKG
+ 
+Mac codesign .kext .pkg
+ 
+ 
+元件 
+.kext  --> .dll
+.pkg  --> .exe
+.dgm
+ 
+https://stackoverflow.com/questions/23824815/how-to-add-codesigning-to-dmg-file-in-mac
+ 
+ 
+
