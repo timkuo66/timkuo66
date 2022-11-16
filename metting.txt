@@ -26,3 +26,4 @@ https://openpower.webex.com/openpower-tc/j.php?MTID=m759bd98116fe3a746cdbfb1d36f
 會議號（存取碼）： 2511 058 5983
 會議密碼： Tm3r8wSpVx9（86378977 來自視訊系統）
 
+http://localhost:7001/portlet<script>alert(1)</script>/Other/ForeignCurrencyRate/ForeignCurrencyRateController.jpf
