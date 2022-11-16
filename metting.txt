@@ -27,3 +27,4 @@ https://openpower.webex.com/openpower-tc/j.php?MTID=m759bd98116fe3a746cdbfb1d36f
 會議密碼： Tm3r8wSpVx9（86378977 來自視訊系統）
 
 http://localhost:7001/portlet<script>alert(1)</script>/Other/ForeignCurrencyRate/ForeignCurrencyRateController.jpf
+http://localhost:7001/portlet&lt;script&gt;alert(1)&lt;/script&gt;/Other/ForeignCurrencyRate/ForeignCurrencyRateController.jpf&gt;&lt;ScRiPt &gt;alert(1)&lt;/ScRiPt&gt;
