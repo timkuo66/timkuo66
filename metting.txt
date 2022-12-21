@@ -1,31 +1,64 @@
-偉康科技：
- 11/16簡報內容： 
+racle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题
+发布于2021-05-31 16:10:27阅读 2.2K0
+Oracle密码过期，取消密码180天限制
 
-如何加入 Google Meet 會議
-視訊通話連結：https://meet.google.com/omq-hfjc-swt
+1、进入sqlplus模式
 
-東宜科技：
- 11/16簡報內容：
+sqlplus / as sysdba;
 
+2、查看用户密码的有效期设置(一般默认的配置文件是DEFAULT)
 
-會議鏈結(webex)： 
-https://jess.my.webex.com/jess.my-tc/j.php?MTID=ma4c37be000a5d23fdfa852c276c41c73 
-會議號： 
-2555 584 3925 
-密碼： 
-1116 
+?
 
-創鑫科技：
+SELECT * FROM dba_profiles WHERE profile='DEFAULT' ANDresource_name='PASSWORD_LIFE_TIME';
+复制
+3、将密码有效期由默认的180天修改成“无限制”，修改之后不需要重启动数据库，会立即生效
 
- 11/16簡報內容：
+?
 
- 
-從會議鏈結加入(webex)
-https://openpower.webex.com/openpower-tc/j.php?MTID=m759bd98116fe3a746cdbfb1d36f13a7b
-透過會議號加入
-會議號（存取碼）： 2511 058 5983
-會議密碼： Tm3r8wSpVx9（86378977 來自視訊系統）
+ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+复制
+4、帐户再改一次密码
 
-http://localhost:7001/portlet<script>alert(1)</script>/Other/ForeignCurrencyRate/ForeignCurrencyRateController.jpf
-http://localhost:7001/portlet&lt;script&gt;alert(1)&lt;/script&gt;/Other/ForeignCurrencyRate/ForeignCurrencyRateController.jpf&gt;&lt;ScRiPt &gt;alert(1)&lt;/ScRiPt&gt;
-tsSLAueP'"()&%<acx><ScRiPt >alert(1)</ScRiPt>
+alter user 用户名 identified by 原密码;
+
+?
+
+alter user system identified by TRANSITsystrong2017;
+复制
+5、使用修改后的用户登录，如果报“ORA-28000:用户已被锁”，解锁
+
+?
+
+alter user 用户名 account unlock;
+commit;
+复制
+下面看下解决Oracle11g密码180天过期，账号锁住的问题
+
+1、查看用户的proifle是哪个，一般是default：
+
+?
+
+sql>SELECT username,PROFILE FROM dba_users;
+复制
+2、查看指定概要文件（如default）的密码有效期设置：
+
+?
+
+sql>SELECT * FROM dba_profiles s WHERE s.profile='DEFAULT' ANDresource_name='PASSWORD_LIFE_TIME';
+复制
+3、将密码有效期由默认的180天修改成“无限制”：
+
+?
+
+sql>ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
+复制
+4、解除账号锁定
+
+?
+
+sql>alter user sys account unlock;
+复制
+总结
+
+以上所述是小编给大家介绍的Oracle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题，希望对大家有所帮助
