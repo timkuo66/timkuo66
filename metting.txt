@@ -1,19 +1,17 @@
-1:30pm
-3月 3日 (星期五) · 下午1:30 - 2:30
-如何加入 Google Meet 會議
-視訊通話連結：https://meet.google.com/qbj-aexo-eka
+1.(傳送序號 + 特店代碼) MSH230328067081A0001
 
-若前面1小時連線時間不夠，再請用下面的連結進來：
+2.押碼：sioRNnFXlCSrHDWCzFR9Y5pEw1cqTZ5b
 
-2:30pm 
-3月 3日 (星期五) · 下午2:30 - 3:30
-如何加入 Google Meet 會議
-視訊通話連結：https://meet.google.com/pea-xdzc-zoc
+3.XML：
+<?xml version="1.0" encoding="Big5"?><CardPayInqRq><MsgSeqNo>MSH230328067081</MsgSeqNo><MtID>A0001</MtID><MtMAC>sioRNnFXlCSrHDWCzFR9Y5pEw1cqTZ5b</MtMAC></CardPayInqRq>
+
+4.CardPayRq：PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iQmlnNSI/PjxDYXJkUGF5SW5xUnE+PE1zZ1NlcU5vPk1TSDIzMDMyODA2NzA4MTwvTXNnU2VxTm8+PE10SUQ+QTAwMDE8L010SUQ+PE10TUFDPnNpb1JObkZYbENTckhEV0N6RlI5WTVwRXcxY3FUWjViPC9NdE1BQz48L0NhcmRQYXlJbnFScT4=
 
 
 
 
-racle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题
+-------------------------------------------------------
+Oracle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题
 发布于2021-05-31 16:10:27阅读 2.2K0
 Oracle密码过期，取消密码180天限制
 
