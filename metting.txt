@@ -37,6 +37,12 @@ alter user 用户名 identified by 原密码;
 
 ?
 
+
+
+
+
+
+
 alter user system identified by TRANSITsystrong2017;
 复制
 5、使用修改后的用户登录，如果报“ORA-28000:用户已被锁”，解锁
@@ -75,3 +81,5 @@ sql>alter user sys account unlock;
 总结
 
 以上所述是小编给大家介绍的Oracle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题，希望对大家有所帮助
+
+@文遠  Hi 文遠，請問您在憑證中心那邊測試環境建的憑證，有申請 43274583 這個統編嗎? 若有空，是否可以幫我登入 憑證中心的畫面截個圖，謝謝您
