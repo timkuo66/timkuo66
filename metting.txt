@@ -122,6 +122,20 @@ server_name your_domain;
 https://drive.google.com/open?id=1Y000 2A cvdiB1sz muIEg7VWe0bAhYa
 
 
+location ~ .*\.(js|css)?$ {
+        expires 12h;
+        proxy_pass http://172.16.90.232:86;
+    }
+    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)?$ {
+        expires 12h;
+        proxy_pass http://172.16.90.232:86;
+    }
+-----------------------------------
+©著作权归作者所有：来自51CTO博客作者minseo的原创作品，请联系作者获取转载授权，否则将追究法律责任
+Nginx反向代理找不到CSS，JS及图片问题解决
+https://blog.51cto.com/u_13045706/4559475
+
+
 
 
 
