@@ -82,4 +82,42 @@ sql>alter user sys account unlock;
 
 以上所述是小编给大家介绍的Oracle密码过期如何取消密码180天限制及密码180天过期，账号锁住的问题，希望对大家有所帮助
 
-@文遠  Hi 文遠，請問您在憑證中心那邊測試環境建的憑證，有申請 43274583 這個統編嗎? 若有空，是否可以幫我登入 憑證中心的畫面截個圖，謝謝您
+Use Java keytool to convert from JKS to P12...
+Export from keytool's proprietary format (called "JKS") to standardized format PKCS #12:
+
+keytool -importkeystore \
+    -srckeystore keystore.jks \
+    -destkeystore keystore.p12 \
+    -deststoretype PKCS12 \
+    -srcalias <jkskeyalias> \
+    -deststorepass <password> \
+    -destkeypass <password>
+...then use openssl to export from P12 to PEM
+Export certificate using openssl:
+
+openssl pkcs12 -in keystore.p12  -nokeys -out cert.pem
+Export unencrypted private key:
+
+openssl pkcs12 -in keystore.p12  -nodes -nocerts -out key.pem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
