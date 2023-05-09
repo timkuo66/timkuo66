@@ -137,6 +137,52 @@ https://blog.51cto.com/u_13045706/4559475
 
 
 
+cd /usr/src/; wget -c ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.00.tar.gz
+gtar -zxf  pcre-8.00.tar.gz
+cd pcre-8.00
+./configure --disable-cpp CFLAGS="-g -O3" CC="/opt/SUNWspro/bin/cc -m64" --prefix=/opt/local --enable-utf8 --enable-unicode-properties
+make
+make install
+
+
+
+
+Building/Installing OpenSSL
+cd /usr/src/; wget -c http://www.openssl.org/source/openssl-0.9.8e.tar.gz
+gtar -zxf openssl-0.9.8e.tar.gz
+cd openssl-0.9.8e
+Before we can continue, we will make a small modification to the Configure script to correct 64 bit mode flag for our cc compiler as follows:
+
+vi Configure
+search for -xarch=amd64 and change it to -m64 then save and exit. After that we can proceed and continue our compilation process:
+
+./Configure solaris64-x86_64-cc threads shared --prefix=/opt/local --openssldir=/opt/local/openssl
+make
+make install
+
+
+Building/Installing PCRE
+As previously said, to build NGINX for Solaris, we must first satisfy a couple of dependencies, namely PCRE (Perl Regular Expression Library) and OpenSSL. (Although OpenSSL is not strictly needed, I like to include it for completeness.) All builds will be full 64-bit.
+
+Note
+Before starting, some solaris packages must be installed on your system like:
+
+* SUNWbtool
+* SUNWtoo
+* SUNWlibmr
+* SUNWlibm
+Let’s begin with PCRE:
+
+cd /usr/src/; wget -c ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.00.tar.gz
+gtar -zxf  pcre-8.00.tar.gz
+cd pcre-8.00
+./configure --disable-cpp CFLAGS="-g -O3" CC="/opt/SUNWspro/bin/cc -m64" --prefix=/opt/local --enable-utf8 --enable-unicode-properties
+make
+make install
+
+
+
+
 
 
 
