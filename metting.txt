@@ -115,70 +115,12 @@ server_name your_domain;
 
 
 
+【Zoom會議室資訊】
+Zoom 會議連結：
+https://zoomtw.zoom.us/j/93131004948?pwd=TWxWMUt3QS9UT2lRcVY0ekdlR2NSdz09
 
-
-
-下載網址：
-https://drive.google.com/open?id=1Y000 2A cvdiB1sz muIEg7VWe0bAhYa
-
-
-location ~ .*\.(js|css)?$ {
-        expires 12h;
-        proxy_pass http://172.16.90.232:86;
-    }
-    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)?$ {
-        expires 12h;
-        proxy_pass http://172.16.90.232:86;
-    }
------------------------------------
-©著作权归作者所有：来自51CTO博客作者minseo的原创作品，请联系作者获取转载授权，否则将追究法律责任
-Nginx反向代理找不到CSS，JS及图片问题解决
-https://blog.51cto.com/u_13045706/4559475
-
-
-
-cd /usr/src/; wget -c ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.00.tar.gz
-gtar -zxf  pcre-8.00.tar.gz
-cd pcre-8.00
-./configure --disable-cpp CFLAGS="-g -O3" CC="/opt/SUNWspro/bin/cc -m64" --prefix=/opt/local --enable-utf8 --enable-unicode-properties
-make
-make install
-
-
-
-
-Building/Installing OpenSSL
-cd /usr/src/; wget -c http://www.openssl.org/source/openssl-0.9.8e.tar.gz
-gtar -zxf openssl-0.9.8e.tar.gz
-cd openssl-0.9.8e
-Before we can continue, we will make a small modification to the Configure script to correct 64 bit mode flag for our cc compiler as follows:
-
-vi Configure
-search for -xarch=amd64 and change it to -m64 then save and exit. After that we can proceed and continue our compilation process:
-
-./Configure solaris64-x86_64-cc threads shared --prefix=/opt/local --openssldir=/opt/local/openssl
-make
-make install
-
-
-Building/Installing PCRE
-As previously said, to build NGINX for Solaris, we must first satisfy a couple of dependencies, namely PCRE (Perl Regular Expression Library) and OpenSSL. (Although OpenSSL is not strictly needed, I like to include it for completeness.) All builds will be full 64-bit.
-
-Note
-Before starting, some solaris packages must be installed on your system like:
-
-* SUNWbtool
-* SUNWtoo
-* SUNWlibmr
-* SUNWlibm
-Let’s begin with PCRE:
-
-cd /usr/src/; wget -c ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.00.tar.gz
-gtar -zxf  pcre-8.00.tar.gz
-cd pcre-8.00
-./configure --disable-cpp CFLAGS="-g -O3" CC="/opt/SUNWspro/bin/cc -m64" --prefix=/opt/local --enable-utf8 --enable-unicode-properties
-make
-make install
+會議 ID：931 3100 4948
+密碼：RUeb$9sA(可附加檔案，無法作課程異動)
 
 
 
