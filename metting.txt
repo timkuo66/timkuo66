@@ -101,10 +101,6 @@ Export unencrypted private key:
 openssl pkcs12 -in keystore.p12  -nodes -nocerts -out key.pem
 
 
-
-
-
-
 server_name your_domain;
 	ssl on;
 	ssl_certificate /etc/ssl/server.crt;
@@ -113,21 +109,10 @@ server_name your_domain;
 	ssl_ciphers HIGH:!aNULL:!MD5;
 
 
+IBM　ＭＥＴＴＩＮＧ　domain name
 
+https://ibm.webex.com/m/70c8654a-19b6-49a2-8818-f25068747fb7
 
-【Zoom會議室資訊】
-Zoom 會議連結：
-https://zoomtw.zoom.us/j/93131004948?pwd=TWxWMUt3QS9UT2lRcVY0ekdlR2NSdz09
-
-會議 ID：931 3100 4948
-密碼：RUeb$9sA(可附加檔案，無法作課程異動)
-
-
-
-
-
-5/24(三) 15:30~16:30(第二十九次)財金定期定額收款平台雙週進度會議報告
-
-https://teams.microsoft.com/l/meetup-join/19%3ameeting_YjM1ZmMzNmMtMGVkNi00ZjUwLThiYjgtYWM0N2VjYjAzMzFm%40thread.v2/0?context=%7b%22Tid%22%3a%229a27efec-0899-4c5e-a5bd-d3f0859212a1%22%2c%22Oid%22%3a%2253aa8e57-0d88-49e9-8807-66e4a45886c3%22%7d
+ 
 
 
